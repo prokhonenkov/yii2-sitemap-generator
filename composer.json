@@ -1,0 +1,28 @@
+{
+    "name": "prokhonenkov/yii2-sitemap-generator",
+    "description": "The sitemap generator",
+    "type": "yii2-extension",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "Vitaliy Prokhonenkov",
+        "email": "prokhonenkov@gmail.com"
+      }
+    ],
+    "keywords": [
+      "yii2",
+      "extension",
+      "sitemap"
+    ],
+    "minimum-stability": "stable",
+    "require": {
+      "php": ">=7.1",
+      "yiisoft/yii2": "~2.0.0",
+      "samdark/sitemap": "^2.2"
+    },
+    "autoload": {
+      "psr-4": {
+        "prokhonenkov\\sitemapgenerator\\": "src"
+      }
+    }
+}
