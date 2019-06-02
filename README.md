@@ -10,7 +10,7 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar composer require prokhonenkov/yii2-sitemap-generator
+php composer.phar require prokhonenkov/yii2-sitemap-generator
 ```
 
 or add
