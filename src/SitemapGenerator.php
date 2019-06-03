@@ -27,7 +27,7 @@ class SitemapGenerator extends Component
 	/**
 	 * @var array
 	 */
-	public $lanuages = [];
+	public $languages = [];
 	/**
 	 * @var null
 	 */
@@ -67,7 +67,7 @@ class SitemapGenerator extends Component
 	public function generate()
 	{
 		/** @var array $indexes */
-		$indexes = $this->lanuages;
+		$indexes = $this->languages;
 		if(!$indexes) {
 			$indexes = [null];
 		}

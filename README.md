@@ -39,7 +39,7 @@ return [
                 \app\models\PostsSitemap::class,
                 \app\models\ProductsSitemap::class,
             ],
-            'lanuages' => [
+            'languages' => [
                 'ru-RU',
                 'en-US',
                 'kk-KZ',
