@@ -105,7 +105,7 @@ class SitemapGenerator extends Component
 
 				/** @var SitemapItemInterface $item */
 				foreach ($model->getSitemapItems() as $item) {
-					if(!$model instanceof SitemapItemInterface) {
+					if(!$item instanceof SitemapItemInterface) {
 						throw new \Exception('model must implements SitemapItemInterface');
 					}
 
