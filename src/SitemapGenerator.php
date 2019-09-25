@@ -93,12 +93,9 @@ class SitemapGenerator extends Component
 				/** @var SitemapSourceInterface $model */
 				$model = new $modelClass;
 
-				$modelFileName = $model->getSitemapName() . '.xml';
 				$sitemapFolderModel = $this->getSitemapFolderPath($model->getSitemapName(), $sitemapFolderIndex);
 
 				$sitemapUrlModel = $this->getSitemapUrl($model->getSitemapName(), $sitemapUrlIndex);
-
-				$nodeModel = new Index($sitemapFolderIndex . $modelFileName);
 
 				$itemsByYear = [];
 				$lastModifiedModel = [];
@@ -126,17 +123,12 @@ class SitemapGenerator extends Component
 
 					foreach ($items as $item) {
 						$lastModifiedYear[] = $item->getLastModified();
-						//var_dump($item->getLocation($index));exit;
 						$sitemap->addItem($item->getLocation($index), $item->getLastModified(), $item->getChangeFrequency(), $item->getPriority());
 					}
 					$sitemap->write();
-					$nodeModel->addSitemap($sitemapUrlModel . $yearFileName, max($lastModifiedYear));
+					$node->addSitemap($sitemapUrlModel . $yearFileName, max($lastModifiedYear));
 				}
-				$nodeModel->write();
-				$nodeIndex->addSitemap($sitemapUrlIndex . $modelFileName, max($lastModifiedModel));
 			}
-			$nodeIndex->write();
-			$node->addSitemap($sitemapUrl . $indexFileName, max($lastModifiedIndex));
 		}
 		$node->write();
 	}
